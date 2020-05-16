@@ -4,7 +4,7 @@ on:
     branches-ignore:
       - dist
     paths:
-      - src/**
+      - ./**
       - .github/workflows/build.yml
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         uses: ToMe25/add-and-commit@master
         with:
           message: "[auto] Update compiled version"
-          add: .
+          add: lib
           force: true
           tag: v1.2.3
           author_name: Github Actions
