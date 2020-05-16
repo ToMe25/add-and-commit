@@ -32,5 +32,8 @@ jobs:
           message: "[auto] Update compiled version"
           add: lib
           force: true
+          tag: v1.2.3
+          author_name: Github Actions
+          author_email: actions@github.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
