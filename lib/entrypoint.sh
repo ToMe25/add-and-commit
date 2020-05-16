@@ -35,6 +35,11 @@ tag() {
     if [ -n "$INPUT_TAG" ]; then git tag $INPUT_TAG; fi
 }
 
+push() {
+    if [ -n "$INPUT_TAG" ]; then git push --set-upstream origin "$INPUT_REF" --tags $INPUT_TAG
+    else; git push --set-upstream origin "$INPUT_REF";fi
+}
+
 # This is needed to make the check work for untracked files
 echo "Staging files..."
 add
@@ -75,9 +80,8 @@ if ! git diff --cached --quiet --exit-code; then
     echo "Tagging commit..."
     tag
 
-    echo $INPUT_REF
     echo "Pushing to repo..."
-    git push --set-upstream origin "$INPUT_REF" --tags
+    push
 
     echo "::endgroup::"
     echo "Task completed."
