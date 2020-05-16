@@ -4,8 +4,9 @@ on:
     branches-ignore:
       - dist
     paths:
-      - ./**
-      - .github/workflows/build.yml
+      - src/**
+      - test/**
+      - .github/workflows/*
 
 jobs:
   build:
