@@ -27,6 +27,9 @@ jobs:
       - name: Compile TypeScript into compressed JavaScript
         run: npm run build
 
+      - name: Edit file
+        run: echo Test >> lib/test.txt
+
       - name: Commit changes
         uses: ToMe25/add-and-commit@master
         with:
