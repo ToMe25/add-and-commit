@@ -37,7 +37,7 @@ tag() {
 
 push() {
     if [ -n "$INPUT_TAG" ]; then git push --set-upstream origin "$INPUT_REF" --tags $INPUT_TAG
-    else; git push --set-upstream origin "$INPUT_REF";fi
+    else git push --set-upstream origin "$INPUT_REF"; fi
 }
 
 # This is needed to make the check work for untracked files
