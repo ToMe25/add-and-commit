@@ -31,7 +31,7 @@ jobs:
         run: echo Test >> lib/test.txt
 
       - name: Commit changes
-        uses: ToMe25/add-and-commit@master
+        uses: ToMe25/add-and-commit@test
         with:
           message: "[auto] Update compiled version"
           add: lib
